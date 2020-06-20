@@ -38,7 +38,7 @@ custom:
     mappingTemplates:
       - dataSource: GreetingsLambdaDataSource
         type: Query
-        field: getGreetings
+        field: getGreeting
         request: "Query.generic.request.vtl"
         response: "Query.generic.response.vtl"
     schema: ./resources/schema.graphql

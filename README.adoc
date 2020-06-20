@@ -1,32 +1,5 @@
-= hello-sls-appsync
+= appsync-simulator-responsesize-bug
 
-A minimalistic serverless (the framework) based appsync + lambda datasource template.
+Showcases a defect in the `serverless-appsync-simulator` plugin: 
 
-Details
-
-- TypeScript support via Babel
-- Offline development support via `serverless-appsync-simulator` and `serverless-offline`
-
-Initialise...
-
-    nvm use 12
-    npm i
-
-Check/build...
-
-    npm run lint
-    npm run build
-
-Start offline server...
-
-    npm run local
-
-Note: A GraphiQL link is written to stdout ... click on it and you are ready to rock n' roll with
-GraphQL queries against the lambda function.
-
-Deploy to AWS...
-
-    sls deploy
-
-Note: The GraphQL `https://.../graphql` endpoint is written to stdout. 
-An API key is written to stdout too - use with HTTP header `x-api-key` in your favorite GraphQL API client.
+    Large response payloads causes hanging client requests
